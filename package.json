@@ -1,6 +1,6 @@
 {
   "name": "@jopenz/milo-components",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dis/cjs/index.js",
   "module": "dist/ems/index.js",
   "license": "MIT",
