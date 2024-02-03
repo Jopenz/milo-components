@@ -1,20 +1,6 @@
 import React from 'react';
 import { TouchableOpacity, Text, Image, StyleSheet } from 'react-native';
-
-export interface AvatarProps extends TextAvatarProps, ImageAvatarProps {}
-
-export interface TextAvatarProps {
-  name: string;
-  size?: number;
-  backgroundColor: string;
-  onPress?: () => void;
-}
-
-export interface ImageAvatarProps {
-  src: string;
-  size?: number;
-  onPress?: () => void;
-}
+import { AvatarProps, ImageAvatarProps, TextAvatarProps } from './Avatar.types';
 
 const ImageAvatar = ({ src, size = 50, onPress }: ImageAvatarProps) => {
   const styles = StyleSheet.create({
@@ -72,10 +58,12 @@ const TextAvatar = ({ name, size = 50, backgroundColor, onPress }: TextAvatarPro
   );
 };
 
-export const Avatar = ({ onPress, name, size, src, backgroundColor }: AvatarProps) => {
+const Avatar = ({ onPress, name, size, src, backgroundColor }: AvatarProps) => {
   if (src) {
     return <ImageAvatar src={src} size={size} onPress={onPress} />;
   }
 
   return <TextAvatar name={name} size={size} backgroundColor={backgroundColor} onPress={onPress} />;
 };
+
+export default Avatar;

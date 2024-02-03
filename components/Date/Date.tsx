@@ -1,13 +1,9 @@
 import React, { ReactElement } from 'react';
 import { Text, StyleSheet, View } from 'react-native';
 import '@fontsource-variable/onest';
+import { DateProps } from './Date.types';
 
-export interface DateProps {
-  day: number;
-  month: string;
-}
-
-export const Date = (props: DateProps): ReactElement => {
+const Date = (props: DateProps): ReactElement => {
   const { day, month } = props;
 
   const styles = StyleSheet.create({
@@ -49,3 +45,5 @@ export const Date = (props: DateProps): ReactElement => {
     </View>
   );
 };
+
+export default Date;

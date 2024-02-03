@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 import { View } from 'react-native';
-import { Date } from './Date';
+import Date from './Date';
 
 const meta = {
   title: 'Date',
